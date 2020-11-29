@@ -1,0 +1,47 @@
+{
+  "name": "quokka-react-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "quokka.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "quokka": {
+    "plugins": [
+      "jsdom-quokka-plugin"
+    ],
+    "jsdom": {
+      "userAgent": "quokka.js",
+      "html": "<div id='testDiv'></div>",
+      "config": {
+        "pretendToBeVisual": true,
+        "runScripts": "dangerously",
+        "url": "http://localhost/"
+      }
+    },
+    "babel": true
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wallabyjs/quokka-react-sample/issues"
+  },
+  "homepage": "https://github.com/wallabyjs/quokka-react-sample#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "jsdom": "^16.2.2"
+  }
+}
