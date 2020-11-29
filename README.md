@@ -4,6 +4,6 @@
 2) Quokka uses babel.config.js
 
 ### How it looks
-![](screenshot.png)
+![Screenshot](screenshot.png)
 ### Resources
 [Quokka Configuration Docs](https://quokkajs.com//configuration.html)
