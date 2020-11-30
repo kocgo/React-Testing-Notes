@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import ExampleComponent from "../src/ExampleComponent";
 
-describe("App Component", function () {
+describe("Example Component", function () {
   it("renders without crashing", function () {
     const div = document.createElement("div");
     ReactDOM.render(<ExampleComponent />, div);
