@@ -1,6 +1,7 @@
 // simple test with React Testing Library
 import * as React from "react";
 import { render, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
 import Counter from "../src/components/counter";
 
 test("counter increments and decrements when the buttons are clicked", () => {
@@ -15,15 +16,16 @@ test("counter increments and decrements when the buttons are clicked", () => {
 
   const { container } = render(<Counter />);
 
-  const [decrement, increment] = container.querySelectorAll("button");
+  const [decrementButton, incrementButton] = container.querySelectorAll(
+    "button"
+  );
   const message = container.firstChild.querySelector("div");
 
   expect(message.textContent).toBe("Current count: 0");
 
-  // 🐨 replace the next two statements with `fireEvent.click(button)`
-  fireEvent.click(increment);
-
-  expect(message.textContent).toBe("Current count: 1");
-  fireEvent.click(decrement);
+  fireEvent.click(incrementButton);
+  // Same thing with jest-dom assertion
+  expect(message).toHaveTextContent("Current count: 1");
+  fireEvent.click(decrementButton);
   expect(message.textContent).toBe("Current count: 0");
 });
