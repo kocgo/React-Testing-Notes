@@ -16,5 +16,8 @@
 2) Create wallaby.js file
 3) Start with Ctrl + Shift + R -> R
 
-#### How it looks
+#### How it looks (success)
 ![Screenshot](Screenshot_Wallaby.png)
+
+#### How it looks (failure)
+![Screenshot](Screenshot_Wallaby_failure.png)
