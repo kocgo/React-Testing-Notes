@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById("testDiv"));
+const ExampleComponent = () => {
+  const [count, setCount] = useState(1);
 
-const root = document.getElementById("testDiv").innerHTML;
+  return <div>{count}</div>;
+};
+
+ReactDOM.render(<ExampleComponent />, document.getElementById("testDiv"));
+
+let root = document.getElementById("testDiv").innerHTML;
+
 root;
