@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import ExampleComponent from "./ExampleComponent";
+import ExampleComponent from "./components/ExampleComponent";
 
 const App = () => {
   return <ExampleComponent />;
