@@ -7,7 +7,6 @@ import Counter from "../src/components/counter";
 test("counter increments and decrements when the buttons are clicked", () => {
   const { container } = render(<Counter />);
   // Screen queries (Accesibility properties)
-  // (`getByRole` can work for the button too)
   const incrementButton = screen.getByText("Increment");
   const decrementButton = screen.getByRole("button", { name: /decrement/i });
   const message = container.firstChild.querySelector("div");
@@ -16,6 +15,7 @@ test("counter increments and decrements when the buttons are clicked", () => {
   fireEvent.click(incrementButton);
   expect(message).toHaveTextContent("Current count: 1");
   // Same thing with userEvent
+  // userEvent.click executes all types of clicks (mousedown, mouseUp, click etc)
   userEvent.click(decrementButton);
   expect(message).toHaveTextContent("Current count: 0");
 });
