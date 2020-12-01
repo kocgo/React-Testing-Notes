@@ -50,6 +50,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.3.0",
+    "faker": "^5.1.0",
     "jsdom": "^16.4.0",
     "webpack": "^5.9.0"
   }
