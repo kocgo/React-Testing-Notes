@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom/extend-expect";
@@ -18,4 +18,7 @@ test("counter increments and decrements when the buttons are clicked", () => {
   // userEvent.click executes all types of clicks (mousedown, mouseUp, click etc)
   userEvent.click(decrementButton);
   expect(message).toHaveTextContent("Current count: 0");
+
+  // Alternative assertion with Snapshots
+  expect(message.textContent).toMatchSnapshot(); // ?
 });

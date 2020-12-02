@@ -6,6 +6,7 @@
 
 import React from "react";
 import Form from "./Form";
+import Spinner from "./Spinner";
 
 function formSubmissionReducer(state, action) {
   switch (action.type) {
@@ -82,7 +83,7 @@ function LoginSubmission() {
         <Form onSubmit={(data) => setFormData(data)} />
       )}
       <div style={{ height: 200 }}>
-        {/* {status === "pending" ? <Spinner /> : null} */}
+        {status === "pending" ? <Spinner /> : null}
         {status === "rejected" ? (
           <div role="alert" style={{ color: "red" }}>
             {errorMessage}

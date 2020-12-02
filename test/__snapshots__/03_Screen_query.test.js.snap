@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`counter increments and decrements when the buttons are clicked 1`] = `
+<div>
+  Current count: 
+  0
+</div>
+`;
