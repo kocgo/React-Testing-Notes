@@ -55,6 +55,7 @@
     "jsdom": "^16.4.0",
     "msw": "^0.24.1",
     "prettier": "^2.2.1",
+    "react-use-geolocation": "^0.1.1",
     "webpack": "^5.9.0",
     "whatwg-fetch": "^3.5.0"
   }

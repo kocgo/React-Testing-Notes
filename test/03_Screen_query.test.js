@@ -20,5 +20,5 @@ test("counter increments and decrements when the buttons are clicked", () => {
   expect(message).toHaveTextContent("Current count: 0");
 
   // Alternative assertion with Snapshots
-  expect(message.textContent).toMatchSnapshot(); // ?
+  expect(message).toMatchSnapshot(); // ?
 });
