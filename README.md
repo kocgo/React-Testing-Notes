@@ -56,3 +56,10 @@ const server = setupServer(
   )
 );
 ```
+
+### Injecting Environment Variables to Babel or other compilers
+In wallaby.js file, directly define your environment variables. Reload your configuration file for Wallaby.
+```js
+// wallaby.js
+process.env.myVAR = "hello goki";
+```
