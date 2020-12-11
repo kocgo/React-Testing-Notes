@@ -103,7 +103,7 @@ userEvent.type(InputElement, "stuffhere");
 ```
 
 Clicking
-```
+```jsx
 import { fireEvent } from "@testing-library/react";
 
 fireEvent.click(ButtonElement);
