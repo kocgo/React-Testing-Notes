@@ -57,9 +57,39 @@ const server = setupServer(
 );
 ```
 
+### 5 Steps in tests
+1) Setup (beforeEach, beforeAll, afterEach, afterAll)
+2) Render Components
+3) Get Element References
+4) Act
+5) Assert
+
 ### Injecting Environment Variables to Babel or other compilers
 In wallaby.js file, directly define your environment variables. Reload your configuration file for Wallaby.
 ```js
 // wallaby.js
 process.env.myVAR = "hello goki";
 ```
+
+### Finding Elements
+Easy way
+```jsx
+import {render} from "@testing-library/react";
+const {getByText) = render(<MyComponent />);
+getByText(/myTextHere/i);
+```
+
+For Input Elements
+```jsx
+import {render} from "@testing-library/react";
+const {getByLabelText) = render(<MyComponent />);
+getByLabelText(/Username/i);
+```
+
+Last Option (by test id)
+```jsx
+import {render} from "@testing-library/react";
+const {getByTestId) = render(<MyComponent />);
+getByTestId(/Username/i);
+```
+
