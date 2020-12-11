@@ -93,3 +93,39 @@ const {getByTestId) = render(<MyComponent />);
 getByTestId(/Username/i);
 ```
 
+### User Actions
+
+Typing
+```jsx
+import userEvent from "@testing-library/user-event";
+
+userEvent.type(InputElement, "stuffhere");
+```
+
+Clicking
+```
+import { fireEvent } from "@testing-library/react";
+
+fireEvent.click(ButtonElement);
+```
+
+### Async Assertions
+
+Wait for element to appear
+```jsx
+import { waitFor } from "@testing-library/react";
+
+await waitFor( () => {
+  expect(getByText("helloworld")).toBeTruthy();
+})
+```
+
+Wait for a function to be called with args
+```jsx
+import { waitFor } from "@testing-library/react";
+
+await waitFor( () => {
+  expect(window.console.log).toHaveBeenCalledWith("hello");
+})
+```
+
