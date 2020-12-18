@@ -129,3 +129,13 @@ await waitFor( () => {
 })
 ```
 
+# Testing Express API
+
+### Setup
+1) Install Dependencies
+```js
+axios
+express
+jsdom
+jest
+```
