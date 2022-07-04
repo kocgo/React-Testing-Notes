@@ -1,0 +1,30 @@
+module.exports = (wallaby) => {
+  process.env.NODE_ENV = "test";
+  
+  return {
+    env: {
+      type: "node"
+    },
+    testFramework: "mocha",
+    // All Related Files that your tests will be applied on
+    files: [{pattern: "src/**/*.ts"}],
+    tests: ["tests/**.spec.ts"],
+    compilers: {
+      "**/*.ts" : wallaby.compilers.typeScript({})
+    },
+    runMode: "onsave",
+    delays: { run: 500 },
+    debug: true,
+    setup: function (wallaby) {
+      require("should");
+      const mocha = wallaby.testFramework;
+      mocha.timeout(15000);
+    },
+    // This is needed in case of non restarting
+    workers: {
+      initial: 1,
+      regular: 1,
+      restart: true
+    }
+  }
+}
